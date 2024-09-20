@@ -1,0 +1,47 @@
+* {
+    color: #8B7969;
+    font-family: "Inika", sans;
+    font-style: normal;
+    font-weight: 400;
+}
+
+main::before {
+    content: "Thank you";
+    font-size: 200px;
+    left: 50%;
+    opacity: 0.05;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: -1;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    position: relative;
+}
+
+.thanks__text {
+    font-weight: bold;
+    text-align: center;
+}
+
+.thanks__button {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.thanks__button a {
+    background: #8B7969;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+}
