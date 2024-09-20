@@ -63,10 +63,9 @@
             </table>
         </div>
         <div class="form__button">
+            <div></div>
             <button class="form__button-submit" type="submit">送信</button>
             <a class="form__button-correction" href="/">修正</a>
-            </div>
-            
         </div>
     </form>
 </div>
