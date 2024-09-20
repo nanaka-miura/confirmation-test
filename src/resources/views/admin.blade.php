@@ -19,7 +19,7 @@
                 FashionablyLate
             </a>
             <div class="header__logout-button">
-                <a href="/">logout</a>
+                <a href="/login">logout</a>
             </div>
         </div>
     </header>
@@ -59,25 +59,59 @@
                     <td class="inquiry-table__item">男性</td>
                     <td class="inquiry-table__item">testt@co.jp</td>
                     <td class="inquiry-table__item">カテゴリ</td>
-                    <td class="inquiry-table__item"><label for="modalToggle" class="modal-open-button">詳細</label></td>
+                    <td class="inquiry-table__item">
+                        <label for="modalToggle" class="modal-open-button">詳細</label>
+                        <input type="checkbox" id="modalToggle" class="modal-checkbox">
+                            <div class="modal" id="modal">
+                                <div class="modal-wrapper">
+                                    <label for="modalToggle" class="close">&times;</label>
+                                    <div class="modal-content">
+                                        <form class="detail-form">
+                                            <input type="hidden" id="">
+                                            <div class="detail-content__group">
+                                                <span>お名前</span>
+                                                <input type="text" name="name" value="山田太郎">
+                                            </div>
+                                            <div class="detail-content__group">
+                                                <span>性別</span>
+                                                <input type="text" name="gender" value="gender">
+                                            </div>
+                                            <div class="detail-content__group">
+                                                <span>メールアドレス</span>
+                                                <input type="email" name="email">
+                                            </div>
+                                            <div class="detail-content__group">
+                                                <span>電話番号</span>
+                                                <input type="text" name="tel">
+                                            </div>
+                                            <div class="detail-content__group">
+                                                <span>住所</span>
+                                                <input type="text" name="address">
+                                            </div>
+                                            <div class="detail-content__group">
+                                                <span>建物名</span>
+                                                <input type="text" name="address-building">
+                                            </div>
+                                            <div class="detail-content__group">
+                                                <span>お問い合わせの種類</span>
+                                                <input type="text" name="category">
+                                            </div>
+                                            <div class="detail-content__group">
+                                                <span>お問い合わせ内容</span>
+                                                <input type="text" name="content">
+                                            </div>
+                                            <div class="detail-content__button">
+                                                <button class="detail-content__button-submit">削除</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 </table>
             </table>
-                
-<input type="checkbox" id="modalToggle" class="modal-checkbox">
-<div class="modal" id="modal">
-  <div class="modal-wrapper">
-    <label for="modalToggle" class="close">&times;</label>
-    <div class="modal-content">
-      <h1>Sample</h1>
-      <p>This is a sample modal content. <br><br>
-        You can place any text or HTML content here.<br><br>
-        Modals are useful for displaying information, alerts, or interactive elements without leaving the current page</p>
-    </div>
-  </div>
-</div>
-
-           
         </div>
     </main>
 </body>
