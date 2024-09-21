@@ -98,6 +98,9 @@
                 <div class="form__input--select">
                     <select name="category_id">
                         <option value="" hidden>選択してください</option>
+                        @foreach($categories as $category)
+                        <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>
