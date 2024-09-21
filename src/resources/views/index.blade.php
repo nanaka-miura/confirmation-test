@@ -85,7 +85,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text form__input--text--address">
-                    <input type="text" name="address-building" placeholder="千駄ヶ谷マンション101">
+                    <input type="text" name="building" placeholder="千駄ヶ谷マンション101">
                 </div>
             </div>
         </div>

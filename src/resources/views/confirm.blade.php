@@ -9,7 +9,8 @@
     <div class="confirm__heading">
         <h2>Confirm</h2>
     </div>
-    <form class="form" action="">
+    <form class="form" action="/contacts" method="post">
+        @csrf
         <div class="confirm-table">
             <table class="confirm-table--inner">
                 <tr class="confirm-table__row">
@@ -45,7 +46,7 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">建物名</th>
                     <td class="confirm-table__text">
-                        <input type="text" name="address-building" value="{{ $contact['address-building'] }}" readonly>
+                        <input type="text" name="building" value="{{ $contact['building'] }}" readonly>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
