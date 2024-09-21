@@ -18,10 +18,10 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text form__input--text--last-name">
-                    <input type="text" name="last-name" placeholder="例:山田">
+                    <input type="text" name="last_name" placeholder="例:山田">
                 </div>
                 <div class="form__input--text form__input--text--first-name">
-                    <input type="text" name="first-name" placeholder="例:太郎">
+                    <input type="text" name="first_name" placeholder="例:太郎">
                 </div>
             </div>
         </div>
@@ -96,13 +96,8 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--select">
-                    <select name="category">
+                    <select name="category_id">
                         <option value="" hidden>選択してください</option>
-                        <option value="1.商品のお届けについて">1.商品のお届けについて</option>
-                        <option value="2.商品の交換について">2.商品の交換について</option>
-                        <option value="3.商品トラブル">3.商品トラブル</option>
-                        <option value="4.ショップへのお問い合わせ">4.ショップへのお問い合わせ</option>
-                        <option value="5.その他">5.その他</option>
                     </select>
                 </div>
             </div>
@@ -114,7 +109,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--textarea">
-                    <textarea name="content" cols="30" rows="5" placeholder="お問い合わせ内容をご記載ください"></textarea>
+                    <textarea name="detail" cols="30" rows="5" placeholder="お問い合わせ内容をご記載ください"></textarea>
                 </div>
             </div>
         </div>
