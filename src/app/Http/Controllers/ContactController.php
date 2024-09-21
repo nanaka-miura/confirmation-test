@@ -31,7 +31,7 @@ class ContactController extends Controller
         return view('confirm',compact('contact'));
     }
 
-    public function store(ContactRequest $request)
+    public function store(Request $request)
     {
 
         $contact = $request->only('category_id','content','last_name','first_name','gender','email','tel','address','building','detail');
