@@ -16,8 +16,10 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">お名前</th>
                     <td class="confirm-table__text">
+                        <div class=" confirm-table__text--name">
                         <input type="text" name="last_name" value="{{ $contact ['last_name'] }}" readonly>
                         <input type="text" name="first_name" value="{{$contact['first_name'] }}" readonly>
+                        </div>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
@@ -68,7 +70,7 @@
         <div class="form__button">
             <div></div>
             <button class="form__button-submit" type="submit">送信</button>
-            <a class="form__button-correction" href="/">修正</a>
+            <a class="form__button-correction" href="{{ route('contacts.index', $contact) }}">修正</a>
         </div>
     </form>
 </div>

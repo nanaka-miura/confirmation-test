@@ -10,10 +10,11 @@ use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $categories = Category::all();
-        return view('index', compact('categories'));
+        $contactData = $request->all();
+        return view('index', compact('categories', 'contactData'));
     }
 
     public function confirm(ContactRequest $request)
@@ -23,10 +24,11 @@ class ContactController extends Controller
 );
 
         $contact['tel'] = $contact['tel1'] . $contact['tel2'] . $contact['tel3'];
-        unset($contact['tel1'], $contact['tel2'], $contact['tel3']);
 
         $category = Category::find($contact['category_id']);
         $contact['category_name'] = $category ? $category->content : '不明';
+
+        session(['contact_data' => $contact]);
 
         return view('confirm',compact('contact'));
     }

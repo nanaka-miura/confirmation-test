@@ -36,10 +36,19 @@ h2 {
     padding: 15px 30px;
     width: 70%;
 }
+.confirm-table__text--name {
+}
+
+.confirm-table__text--name input {
+    display: inline-block;
+    min-width: 1ch;
+        /* 最低幅を設定 */
+        max-width: 10ch;
+        /* 最大幅を設定 */
+}
 
 .confirm-table__text input {
     border: none;
-    width: 100%;
 }
 
 .form__button {
