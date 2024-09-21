@@ -37,7 +37,10 @@
     padding: 5px 15px;
 }
 
-.header__logout-button a {
+.header__logout-button button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
     color: #D9C6B5;
     text-decoration: none;
 }
@@ -213,14 +216,14 @@ h2 {
     margin-bottom: 10px;
 }
 
-span {
+.detail-content__header {
     font-size: 14px;
     font-weight: bold;
     grid-column: 1/2;
     margin-right: 10px;
 }
 
-input {
+.detail-content__item {
     border: none;
     font-size: 14px;
     grid-column: 2/3;

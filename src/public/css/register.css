@@ -69,6 +69,10 @@ h2 {
     padding: 50px 100px;
 }
 
+.form__error {
+    color: #EB5756;
+}
+
 .form__group {
     display: flex;
     flex-direction: column;

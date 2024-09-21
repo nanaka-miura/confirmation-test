@@ -62,6 +62,10 @@ h2 {
     font-size: 28px;
 }
 
+.form__error {
+    color: #EB5756;
+}
+
 .form {
     background: #FFFFFF;
     border: 1px solid #C5B9B0;

@@ -18,8 +18,10 @@
             <a class="header__logo" href="/">
                 FashionablyLate
             </a>
-            <div class="header__logout-button">
-                <a href="/login">logout</a>
+            <form class="header__logout-button" action="/logout" method="post">
+                @csrf
+                <button>logout</button>
+            </form>
             </div>
         </div>
     </header>
@@ -69,36 +71,36 @@
                                         <form class="detail-form">
                                             <input type="hidden" id="">
                                             <div class="detail-content__group">
-                                                <span>お名前</span>
-                                                <input type="text" name="name" value="山田太郎">
+                                                <span class="detail-content__header">お名前</span>
+                                                <input class="detail-content__item" type="text" name="name" value="山田太郎">
                                             </div>
                                             <div class="detail-content__group">
-                                                <span>性別</span>
-                                                <input type="text" name="gender" value="gender">
+                                                <span class="detail-content__header">性別</span>
+                                                <input class="detail-content__item" type="text" name="gender" value="gender">
                                             </div>
                                             <div class="detail-content__group">
-                                                <span>メールアドレス</span>
-                                                <input type="email" name="email">
+                                                <span class="detail-content__header">メールアドレス</span>
+                                                <input class="detail-content__item" type="email" name="email">
                                             </div>
                                             <div class="detail-content__group">
-                                                <span>電話番号</span>
-                                                <input type="text" name="tel">
+                                                <span class="detail-content__header">電話番号</span>
+                                                <input class="detail-content__item" type="text" name="tel">
                                             </div>
                                             <div class="detail-content__group">
-                                                <span>住所</span>
-                                                <input type="text" name="address">
+                                                <span class="detail-content__header">住所</span>
+                                                <input class="detail-content__item" type="text" name="address">
                                             </div>
                                             <div class="detail-content__group">
-                                                <span>建物名</span>
-                                                <input type="text" name="address-building">
+                                                <span class="detail-content__header">建物名</span>
+                                                <input class="detail-content__item" type="text" name="address-building">
                                             </div>
                                             <div class="detail-content__group">
-                                                <span>お問い合わせの種類</span>
-                                                <input type="text" name="category">
+                                                <span class="detail-content__header">お問い合わせの種類</span>
+                                                <input class="detail-content__item" type="text" name="category">
                                             </div>
                                             <div class="detail-content__group">
-                                                <span>お問い合わせ内容</span>
-                                                <input type="text" name="content">
+                                                <span class="detail-content__header">お問い合わせ内容</span>
+                                                <input class="detail-content__item" type="text" name="content">
                                             </div>
                                             <div class="detail-content__button">
                                                 <button class="detail-content__button-submit">削除</button>

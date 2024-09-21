@@ -40,7 +40,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--radio">
-                    <input type="radio" name="gender" value="男性"  {{ old('gender', $contactData['gender'] ?? '') === '男性' ? 'checked' : '' }}>男性
+                    <input type="radio" name="gender" checked="checked" value="男性"  {{ old('gender', $contactData['gender'] ?? '') === '男性' ? 'checked' : '' }}>男性
                     <input type="radio" name="gender" value="女性" {{ old('gender', $contactData['gender'] ?? '') === '女性' ? 'checked' : '' }}>女性
                     <input type="radio" name="gender" value="その他"{{ old('gender', $contactData['gender'] ?? '') === 'その他' ? 'checked' : '' }}>その他
                     <div class="form__error">

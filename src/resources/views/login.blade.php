@@ -27,16 +27,25 @@
             <div class="login__heading">
                 <h2>Login</h2>
             </div>
-            <form class="form" action="">
+            <form class="form" action="/login" method="post">
+                @csrf
                 <div class="form__group">
                     <span class="form__label">メールアドレス</span>
-                    <div class="form__error"></div>
-                    <input class="form__input" type="email" name="email" placeholder="例:test@example.com">
+                    <input class="form__input" type="email" name="email" value="{{old('email')}}" placeholder="例:test@example.com">
+                    <div class="form__error">
+                        @error('email')
+                        {{ $message }}
+                        @enderror
+                    </div>
                 </div>
                 <div class="form__group">
                     <span class="form__label">パスワード</span>
-                    <div class="form__error"></div>
                     <input class="form__input" type="password" name="password" placeholder="例:coachtech1106">
+                    <div class="form__error">
+                        @error('password')
+                        {{ $message }}
+                        @enderror
+                    </div>
                 </div>
                 <div class="form__button">
                     <button class="form__button-submit" type="submit">ログイン</button>
