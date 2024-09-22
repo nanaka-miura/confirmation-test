@@ -67,7 +67,7 @@
                 </tr>
                 @foreach($contacts as $contact)
                 <tr class="inquiry-table__row">
-                    <td class="inquiry-table__item">{{$contact['last_name']}}{{$contact['first_name']}}</td>
+                    <td class="inquiry-table__item">{{$contact['last_name']}}　{{$contact['first_name']}}</td>
                     <td class="inquiry-table__item">{{$contact['gender']}}</td>
                     <td class="inquiry-table__item">{{$contact['email']}}</td>
                     <td class="inquiry-table__item">{{$contact->category_content}}</td>
@@ -84,7 +84,7 @@
                                             <input type="hidden" id="">
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">お名前</span>
-                                                <input class="detail-content__item" type="text" name="name" value="{{$contact['last_name']}}{{$contact['first_name']}}" readonly>
+                                                <input class="detail-content__item" type="text" name="name" value="{{$contact['last_name']}}　{{$contact['first_name']}}" readonly>
                                             </div>
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">性別</span>
@@ -100,7 +100,7 @@
                                             </div>
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">住所</span>
-                                                <input class="detail-content__item" type="text" name="address" value="{{$contact['address']}}" readonly>
+                                                <textarea class="detail-content__item" type="text" rows="2" name="address"readonly>{{$contact['address']}}</textarea>
                                             </div>
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">建物名</span>
@@ -112,7 +112,7 @@
                                             </div>
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">お問い合わせ内容</span>
-                                                <input class="detail-content__item" type="text" name="content" value="{{$contact['detail']}}" readonly>
+                                                <textarea class="detail-content__item" type="text" name="content" rows="3" readonly>{{$contact['detail']}}</textarea>
                                             </div>
                                             <div class="detail-content__button">
                                                 <input type="hidden" name="id" value="{{$contact['id']}}">
