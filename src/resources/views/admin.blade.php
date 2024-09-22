@@ -31,19 +31,24 @@
             <div class="admin__heading">
                 <h2>Admin</h2>
             </div>
-            <form class="search-form">
-                <input class="search-form__item-input" type="text" placeholder="名前やメールアドレスを入力してください">
-                <select class="search-form__item-select search-form__item-select--gender">
+            <form class="search-form" action="/admin/search" post="get">
+                @csrf
+                <input class="search-form__item-input" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください">
+                <select class="search-form__item-select search-form__item-select--gender" name="gender">
                 <option value="" hidden>性別</option>
-                <option value=""></option>
+                <option value="男性">男性</option>
+                <option value="女性">女性</option>
+                <option value="その他">その他</option>
                 </select>
-                <select class="search-form__item-select search-form__item-select--category">
+                <select class="search-form__item-select search-form__item-select--category" name="category_id">
                     <option value="" hidden>お問い合わせの種類</option>
-                    <option value=""></option>
+                    @foreach($categories as $category)
+                    <option value="{{$category->id}}">{{$category->content}}</option>
+                    @endforeach
                 </select>
-                <input class="search-form__item-select search-form__item-select--date" type="date">
+                <input class="search-form__item-select search-form__item-select--date" type="date" name="date">
                 <button class="search-form__item-search" type="submit">検索</button>
-                <input class="search-form__item-reset" type="reset">
+                <button class="search-form__item-reset" type="submit" formaction="/admin">リセット</button>
             </form>
             <div class="content__menu">
                 <a class="content__menu--export-button" href="">エクスポート</a>
@@ -65,7 +70,7 @@
                     <td class="inquiry-table__item">{{$contact['gender']}}</td>
                     <td class="inquiry-table__item">{{$contact['email']}}</td>
                     <td class="inquiry-table__item">{{$contact->category_content}}</td>
-                    <form action="contacts/delete" method="post">
+                    <form action="/contacts/delete" method="post">
                         @method('delete')
                         @csrf
                     <td class="inquiry-table__item">

@@ -22,3 +22,4 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin',[AdminController::class,'index']);
 });
 Route::delete('/contacts/delete',[AdminController::class,'destroy']);
+Route::get('/admin/search',[AdminController::class,'search']);
