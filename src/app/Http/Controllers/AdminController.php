@@ -10,11 +10,11 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::with('category')->get();
+        $contacts = Contact::with('category')->paginate(7);
         foreach ($contacts as $contact) {
         $contact->category_content = $contact->category ? $contact->category->content : '不明';
         }
-        return view('admin',compact('contacts'));
+        return view('admin', compact('contacts'));
     }
 
     public function destroy(Request $request)

@@ -116,13 +116,59 @@ h2 {
 }
 
 .content__menu {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
 .content__menu--export-button {
+    align-items: center;
     background: rgba(225, 219, 214, 0.6);
+    display: flex;
+    font-size: 14px;
+    height: 35px;
     padding: 10px;
     text-decoration: none;
+}
+
+.content__menu--pagination {
+    align-items: center;
+    display: flex;
+    height: 35px;
+}
+
+.pagination {
+    display: flex;
+}
+
+.page-item {
+    height: 35px;
+    width: 35px;
+    border-top: 1px solid #E0DFDE;
+    border-bottom: 1px solid #E0DFDE;
+    border-left: 1px solid #E0DFDE;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    background: #8B7969;
+    border: none;
+}
+
+.active .page-link {
+    color: #FFFFFF;
+}
+
+.page-item:last-child {
+    border-right: 1px solid #E0DFDE;
+}
+
+.page-link {
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .inquiry-table__inner {
