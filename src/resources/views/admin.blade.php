@@ -56,11 +56,13 @@
                     <th class="inquiry-table__header">お問い合わせの種類</th>
                     <th class="inquiry-table__header"></th>
                 </tr>
+                @foreach($contacts as $contact)
                 <tr class="inquiry-table__row">
-                    <td class="inquiry-table__item">山田太郎</td>
-                    <td class="inquiry-table__item">男性</td>
-                    <td class="inquiry-table__item">testt@co.jp</td>
-                    <td class="inquiry-table__item">カテゴリ</td>
+                <form>
+                    <td class="inquiry-table__item">{{$contact['last_name']}}{{$contact['first_name']}}</td>
+                    <td class="inquiry-table__item">{{$contact['gender']}}</td>
+                    <td class="inquiry-table__item">{{$contact['email']}}</td>
+                    <td class="inquiry-table__item">{{$contact->category_content}}</td>
                     <td class="inquiry-table__item">
                         <label for="modalToggle" class="modal-open-button">詳細</label>
                         <input type="checkbox" id="modalToggle" class="modal-checkbox">
@@ -111,7 +113,9 @@
                             </div>
                         </div>
                     </td>
+                </form>
                 </tr>
+                @endforeach
                 </table>
             </table>
         </div>
