@@ -36,6 +36,7 @@
                 <input class="search-form__item-input" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください">
                 <select class="search-form__item-select search-form__item-select--gender" name="gender">
                 <option value="" hidden>性別</option>
+                <option value="">全て</option>
                 <option value="男性">男性</option>
                 <option value="女性">女性</option>
                 <option value="その他">その他</option>
