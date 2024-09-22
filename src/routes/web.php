@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
+use App\Models\Contact;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ Route::middleware('auth')->group(function () {
 });
 Route::delete('/contacts/delete',[AdminController::class,'destroy']);
 Route::get('/admin/search',[AdminController::class,'search']);
+Route::get('/admin/export', [ContactController::class, 'export'])->name('admin.export');

@@ -52,7 +52,7 @@
                 <button class="search-form__item-reset" type="submit" formaction="/admin">リセット</button>
             </form>
             <div class="content__menu">
-                <a class="content__menu--export-button" href="">エクスポート</a>
+                <a class="content__menu--export-button" href="{{ route('admin.export', request()->query()) }}">エクスポート</a>
 
                 <div class="content__menu--pagination">{{ $contacts->links('pagination::bootstrap-4') }}</div>
             </div>
