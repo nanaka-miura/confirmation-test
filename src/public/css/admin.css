@@ -224,6 +224,7 @@ h2 {
 }
 
 .detail-content__item {
+    outline: none;
     border: none;
     font-size: 14px;
     grid-column: 2/3;

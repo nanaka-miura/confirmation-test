@@ -58,53 +58,55 @@
                 </tr>
                 @foreach($contacts as $contact)
                 <tr class="inquiry-table__row">
-                <form>
                     <td class="inquiry-table__item">{{$contact['last_name']}}{{$contact['first_name']}}</td>
                     <td class="inquiry-table__item">{{$contact['gender']}}</td>
                     <td class="inquiry-table__item">{{$contact['email']}}</td>
                     <td class="inquiry-table__item">{{$contact->category_content}}</td>
+                    <form action="contacts/delete" method="post">
+                        @method('delete')
+                        @csrf
                     <td class="inquiry-table__item">
-                        <label for="modalToggle" class="modal-open-button">詳細</label>
-                        <input type="checkbox" id="modalToggle" class="modal-checkbox">
-                            <div class="modal" id="modal">
+                        <label for="modalToggle{{$contact['id']}}" class="modal-open-button">詳細</label>
+                        <input type="checkbox" id="modalToggle{{$contact['id']}}" class="modal-checkbox">
+                            <div class="modal" id="modal{{$contact['id']}}">
                                 <div class="modal-wrapper">
-                                    <label for="modalToggle" class="close">&times;</label>
+                                    <label for="modalToggle{{$contact['id']}}" class="close">&times;</label>
                                     <div class="modal-content">
-                                        <form class="detail-form">
                                             <input type="hidden" id="">
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">お名前</span>
-                                                <input class="detail-content__item" type="text" name="name" value="山田太郎">
+                                                <input class="detail-content__item" type="text" name="name" value="{{$contact['last_name']}}{{$contact['first_name']}}" readonly>
                                             </div>
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">性別</span>
-                                                <input class="detail-content__item" type="text" name="gender" value="gender">
+                                                <input class="detail-content__item" type="text" name="gender" value="{{$contact['gender']}}" readonly>
                                             </div>
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">メールアドレス</span>
-                                                <input class="detail-content__item" type="email" name="email">
+                                                <input class="detail-content__item" type="email" name="email" value="{{$contact['email']}}" readonly>
                                             </div>
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">電話番号</span>
-                                                <input class="detail-content__item" type="text" name="tel">
+                                                <input class="detail-content__item" type="text" name="tel" value="{{$contact['tel']}}" readonly>
                                             </div>
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">住所</span>
-                                                <input class="detail-content__item" type="text" name="address">
+                                                <input class="detail-content__item" type="text" name="address" value="{{$contact['address']}}" readonly>
                                             </div>
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">建物名</span>
-                                                <input class="detail-content__item" type="text" name="address-building">
+                                                <input class="detail-content__item" type="text" name="address-building" value="{{$contact['building']}}" readonly>
                                             </div>
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">お問い合わせの種類</span>
-                                                <input class="detail-content__item" type="text" name="category">
+                                                <input class="detail-content__item" type="text" name="category" value="{{$contact->category_content}}" readonly>
                                             </div>
                                             <div class="detail-content__group">
                                                 <span class="detail-content__header">お問い合わせ内容</span>
-                                                <input class="detail-content__item" type="text" name="content">
+                                                <input class="detail-content__item" type="text" name="content" value="{{$contact['detail']}}" readonly>
                                             </div>
                                             <div class="detail-content__button">
+                                                <input type="hidden" name="id" value="{{$contact['id']}}">
                                                 <button class="detail-content__button-submit">削除</button>
                                             </div>
                                         </form>
@@ -116,7 +118,6 @@
                 </form>
                 </tr>
                 @endforeach
-                </table>
             </table>
         </div>
     </main>
