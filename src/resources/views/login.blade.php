@@ -14,7 +14,7 @@
     <header class="header">
         <div class="header__inner">
             <div></div>
-            <a class="header__logo" href="/">
+            <a class="header__logo" href="/login">
                 FashionablyLate
             </a>
             <div class="header__logout-button">

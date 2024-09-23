@@ -85,13 +85,10 @@ h2 {
     width: 30%;
 }
 
-.form__input--text--tel {
-    display: flex;
-    align-items: center;
-}
-
 .form__input--text--tel--hyphen {
+    display: inline-block;
     font-size: 16px;
+    line-height: 2.5em;
 }
 
 .form__input--text--tel1 input,
@@ -174,4 +171,5 @@ input[type="radio"]:checked {
 .form__error {
     color: #EB5756;
     font-size: 12px;
+    min-height: 1.5em;
 }

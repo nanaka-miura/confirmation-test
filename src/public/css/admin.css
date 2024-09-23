@@ -13,7 +13,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: 80px;
     margin: 0 auto;
     max-width: 1230px;
     padding: 20px 15px;
@@ -42,6 +42,7 @@
     background-color: transparent;
     border: none;
     color: #D9C6B5;
+    cursor: pointer;
     text-decoration: none;
 }
 
@@ -85,12 +86,14 @@ h2 {
     background: #82756A;
     border: 1px solid #8B7969;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .search-form__item-reset {
     background: #D9C6B5;
     border: 1px solid #D9C6B5;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .search-form__item-input {
@@ -153,6 +156,16 @@ h2 {
     align-items: center;
 }
 
+.page-item:first-child {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.page-item:last-child {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 .active {
     background: #8B7969;
     border: none;
@@ -167,8 +180,9 @@ h2 {
 }
 
 .page-link {
-    text-decoration: none;
+    cursor: pointer;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .inquiry-table__inner {
@@ -197,6 +211,7 @@ h2 {
     background: rgba(244, 244, 244, 0.3);
     border: 1px solid rgba(217, 198, 181, 0.6);
     color: #D9C6B5;
+    cursor: pointer;
     padding: 5px 10px;
 }
 
@@ -213,19 +228,19 @@ h2 {
 }
 
 .close {
+    align-items: center;
     border: 1px solid #8B7969;
     border-radius: 50%;
     cursor: pointer;
     font-size: 24px;
-    height: 30px;
+    height: 38px;
     position: absolute;
     right: 30px;
-    top: 30px;
+    top: 35px;
     transform: translate(50%, -50%);
-    width: 30px;
+    width: 38px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .modal-wrapper {
@@ -288,5 +303,6 @@ textarea {
     background: #BA370D;
     border: none;
     color: #FFFFFF;
+    cursor: pointer;
     padding: 5px 10px;
 }

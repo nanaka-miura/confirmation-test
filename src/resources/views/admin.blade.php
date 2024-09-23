@@ -16,7 +16,7 @@
     <header class="header">
         <div class="header__inner">
             <div></div>
-            <a class="header__logo" href="/">
+            <a class="header__logo" href="/admin">
                 FashionablyLate
             </a>
             <form class="header__logout-button" action="/logout" method="post">
@@ -53,8 +53,7 @@
             </form>
             <div class="content__menu">
                 <a class="content__menu--export-button" href="{{ route('admin.export', request()->query()) }}">エクスポート</a>
-
-                <div class="content__menu--pagination">{{ $contacts->links('pagination::bootstrap-4') }}</div>
+                <div class="content__menu--pagination"><a href=""></a>{{ $contacts->links('pagination::bootstrap-4') }}</div>
             </div>
             <div class="inquiry-table">
                 <table class="inquiry-table__inner">
