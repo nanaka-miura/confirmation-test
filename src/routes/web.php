@@ -17,8 +17,8 @@ use App\Models\Contact;
 */
 
 Route::get('/', [ContactController::class,'index'])->name('contacts.index');
-Route::post('/contacts/confirm', [ContactController::class,'confirm']);
-Route::post('/contacts', [ContactController::class,'store']);
+Route::post('/confirm', [ContactController::class,'confirm']);
+Route::post('/confirm/contact', [ContactController::class,'store']);
 Route::middleware('auth')->group(function () {
     Route::get('/admin',[AdminController::class,'index']);
 });
