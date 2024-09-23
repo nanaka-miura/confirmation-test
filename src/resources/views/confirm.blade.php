@@ -17,8 +17,9 @@
                     <th class="confirm-table__header">お名前</th>
                     <td class="confirm-table__text">
                         <div class=" confirm-table__text--name">
-                        <input type="text" name="last_name" value="{{ $contact ['last_name'] }}" readonly>
-                        <input type="text" name="first_name" value="{{$contact['first_name'] }}" readonly>
+                        <input type="text" name="full_name" value="{{ $contact ['last_name'] }}　{{ $contact ['first_name'] }}" readonly>
+                        <input type="hidden" name="last_name" value="{{ $contact ['last_name'] }}">
+                        <input type="hidden" name="first_name" value="{{$contact['first_name'] }}">
                         </div>
                     </td>
                 </tr>
