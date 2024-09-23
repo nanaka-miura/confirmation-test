@@ -46,7 +46,6 @@ class FortifyServiceProvider extends ServiceProvider
             return Limit::perMinute(10)->by($email . $request->ip());
         });
 
-
         $this->app->singleton(
         \Laravel\Fortify\Contracts\LogoutResponse::class,
         \App\Http\Responses\LogoutResponse::class

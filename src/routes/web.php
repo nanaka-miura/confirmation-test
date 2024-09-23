@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
 use App\Models\Contact;
+use App\Actions\Fortify\CreateNewUser;
+use Illuminate\Http\Request;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +29,7 @@ Route::middleware('auth')->group(function () {
 Route::delete('/contacts/delete',[AdminController::class,'destroy']);
 Route::get('/admin/search',[AdminController::class,'search']);
 Route::get('/admin/export', [ContactController::class, 'export'])->name('admin.export');
-Route::get
+Route::post('/register', function (Request $request) {
+    $user = CreateNewUser::create($request->all());
+    return redirect('/login')->with('success', '登録が完了しました。ログインしてください。');
+});
